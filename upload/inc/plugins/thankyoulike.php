@@ -3877,7 +3877,7 @@ function tyl_limits_usergroup_permission()
 
 	if($mybb->settings[$prefix.'limits'] == 1)
 	{
-		if(!empty($form_container->_title) & !empty($lang->users_permissions) & $form_container->_title == $lang->users_permissions)
+		if(!empty($form_container->_title) && !empty($lang->users_permissions) && $form_container->_title == $lang->users_permissions)
 		{
 			$tyl_limits_options = array(
 			"{$lang->tyl_limits_permissions_title}<br /><small class=\"input\">{$lang->tyl_limits_permissions_desc}</small><br />".$form->generate_numeric_field('tyl_limits_max', $mybb->input['tyl_limits_max'], array('id' => 'max_tyl_limits', 'class' => 'field50', 'min' => 0)),
